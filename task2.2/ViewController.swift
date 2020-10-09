@@ -23,26 +23,31 @@ class ViewController: UIViewController {
     
     @IBAction func resultButton(_ sender: Any) {
         
-        var kekka = Double()
-        var num1 = Double(textField1.text!)
-        var num2 = Double(textField2.text!)
+        var kekka: Double
+        let num1 = Double(textField1.text!) ?? 0
+        let num2 = Double(textField2.text!) ?? 0
+
         
         switch keisanButton.selectedSegmentIndex{
         
         case 0:
-            kekka = num1 ?? 0
-            kekka += num2 ?? 0
             
+            kekka = Double(num1 + num2)
+            resultLabel.text = String(kekka)
+
         case 1:
-            kekka = num1 ?? 0
-            kekka -= num2 ?? 0
+            kekka = Double(num1 - num2)
+            resultLabel.text = String(kekka)
+
         case 2:
-            kekka = num1 ?? 0
-            kekka *= num2 ?? 0
+            kekka = Double(num1 * num2)
+            resultLabel.text = String(kekka)
+
         case 3:
             if num2 != 0{
-                kekka = num1 ?? 0
-                kekka /= num2 ?? 0
+                kekka = Double(num1 / num2)
+                resultLabel.text = String(kekka)
+
             }else{
                 resultLabel.text = "割る数には０以外を入れてください"
             }
@@ -52,9 +57,10 @@ class ViewController: UIViewController {
             
             
         }
-        resultLabel.text = String(kekka)
 
+        
+        
     }
-    
+
 }
 

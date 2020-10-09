@@ -31,9 +31,6 @@
                                     <segment title="×"/>
                                     <segment title="÷"/>
                                 </segments>
-                                <connections>
-                                    <action selector="resultButton:" destination="BYZ-38-t0r" eventType="valueChanged" id="Euh-Yb-X1I"/>
-                                </connections>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8CS-mL-YbO">
                                 <rect key="frame" x="184" y="333" width="46" height="30"/>
