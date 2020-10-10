@@ -33,33 +33,31 @@ class ViewController: UIViewController {
         case 0:
             
             kekka = Double(num1 + num2)
-            resultLabel.text = String(kekka)
+//           (いらん) resultLabel.text = String(kekka)
+        
 
         case 1:
             kekka = Double(num1 - num2)
-            resultLabel.text = String(kekka)
+//            resultLabel.text = String(kekka)
 
         case 2:
             kekka = Double(num1 * num2)
-            resultLabel.text = String(kekka)
+//            resultLabel.text = String(kekka)
 
         case 3:
-            if num2 != 0{
-                kekka = Double(num1 / num2)
-                resultLabel.text = String(kekka)
-
-            }else{
+            guard num2 != 0 else{
+                //false判定の時の処理
                 resultLabel.text = "割る数には０以外を入れてください"
+                return
             }
-            
-        default:
-            break
-            
-            
+            //true判定の時の処理（num2 != 0）
+                kekka = Double(num1 / num2)
+//                resultLabel.text = String(kekka)
+                    default:
+            return
         }
+        resultLabel.text = String(kekka)
 
-        
-        
     }
 
 }
